@@ -25,10 +25,10 @@ function Login() {
 
   return (
     <div className="max-w-md mx-auto">
-      <Link to="/" className="flex items-center space-x-2 mb-6">
+      {/* <Link to="/" className="flex items-center space-x-2 mb-6">
         <Leaf className="h-8 w-8 text-emerald-600" />
         <span className="text-xl font-bold text-gray-800">GreenInsight</span>
-      </Link>
+      </Link> */}
       <h2 className="text-2xl font-bold mb-4">Log In</h2>
       {error && <div className="text-red-500 mb-4">{error}</div>}
       <form onSubmit={handleLogin}>

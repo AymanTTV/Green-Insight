@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Clock } from 'lucide-react';
 import { PlantAnalysis, getRecentAnalyses } from '../lib/storage';
+import { Link, useNavigate } from 'react-router-dom';
 
 function RecentPlants() {
   const [plants, setPlants] = useState<PlantAnalysis[]>([]);
@@ -17,7 +18,7 @@ function RecentPlants() {
 
       {plants.length === 0 ? (
         <div className="text-center text-gray-600 py-12">
-          No plant analyses yet. Upload your first plant image to get started!
+          No plant analyses yet. <Link to="/" className="text-green-600 hover:text-green-800"> Upload your first plant image </Link> to get started!
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
