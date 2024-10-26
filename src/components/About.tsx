@@ -60,14 +60,18 @@ function About() {
               </div>
               
               <div className="pt-4 space-y-3">
-                <button className="w-full flex items-center justify-center px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors">
-                  <Download className="w-5 h-5 mr-2" />
-                  Download CV
-                </button>
-                <button className="w-full flex items-center justify-center px-4 py-2 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Business Card
-                </button>
+                <a href="https://aypersonal.com/Ayman-Liban-Ali-CV-Resume-1.pdf" download target="_blank" rel="noopener noreferrer">
+                  <button className="w-full flex items-center justify-center px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors">
+                    <Download className="w-5 h-5 mr-2" />
+                    Download CV
+                  </button>
+                </a>
+                <a href="https://aypersonal.com/Ayman's%20business%20card.pdf" download target="_blank" rel="noopener noreferrer">
+                  <button className="w-full flex items-center justify-center px-4 py-2 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">
+                    <Download className="w-5 h-5 mr-2" />
+                    Download Business Card
+                  </button>
+                </a>
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+// src/components/Contact.tsx
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -7,11 +8,22 @@ function Contact() {
     email: '',
     message: ''
   });
+  const [submittedMessage, setSubmittedMessage] = useState('');
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send the message to a server
-    alert('Thank you for your message! I will get back to you soon.');
+    setError('');
+    try {
+      // Here you would typically send the message to a server
+      // For demonstration, we'll just simulate a success response
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate a network delay
+      setSubmittedMessage(`Thank you, ${form.name}! Your message has been sent.`);
+      setForm({ name: '', email: '', message: '' }); // Reset form
+    } catch (error) {
+      console.error(error);
+      setError('Error sending message, please try again later.');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -36,7 +48,7 @@ function Contact() {
               <Mail className="w-6 h-6 mr-3" />
               <div>
                 <h3 className="font-medium">Email</h3>
-                <p>hello@aypersonal.com</p>
+                <p>info@aypersonal.com</p>
               </div>
             </div>
 
@@ -113,6 +125,8 @@ function Contact() {
               Send Message
             </button>
           </form>
+          {submittedMessage && <div className="mt-4 text-green-600">{submittedMessage}</div>}
+          {error && <div className="mt-4 text-red-500">{error}</div>}
         </div>
       </div>
     </div>

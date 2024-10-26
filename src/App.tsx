@@ -1,9 +1,12 @@
+// src/App.tsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import RecentPlants from './components/RecentPlants';
 import About from './components/About';
 import Contact from './components/Contact';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
 import Footer from './components/Footer';
 
 function App() {
@@ -17,6 +20,8 @@ function App() {
             <Route path="/recent" element={<RecentPlants />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </main>
         <Footer />

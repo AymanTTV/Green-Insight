@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, WebhookIcon} from 'lucide-react';
 
 function Footer() {
   return (
@@ -11,13 +11,13 @@ function Footer() {
           </div>
           
           <div className="flex space-x-6">
-            <a href="https://github.com" className="hover:text-emerald-400 transition-colors">
+            <a href="https://github.com/aymanttv" className="hover:text-emerald-400 transition-colors">
               <Github className="h-6 w-6" />
             </a>
-            <a href="https://linkedin.com" className="hover:text-emerald-400 transition-colors">
-              <Linkedin className="h-6 w-6" />
+            <a href="https://aypersonal.com" className="hover:text-emerald-400 transition-colors">
+              <WebhookIcon className="h-6 w-6" />
             </a>
-            <a href="mailto:hello@aypersonal.com" className="hover:text-emerald-400 transition-colors">
+            <a href="mailto:info@aypersonal.com" className="hover:text-emerald-400 transition-colors">
               <Mail className="h-6 w-6" />
             </a>
           </div>
